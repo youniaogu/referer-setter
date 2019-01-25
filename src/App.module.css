@@ -1,0 +1,12 @@
+.app {
+  margin: 10px;
+  white-space: nowrap;
+}
+
+.content {}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
