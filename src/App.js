@@ -63,7 +63,7 @@ class App extends Component {
     const { from, to, list } = this.state;
 
     return (
-      <div className={styles.app}>
+      <div className={styles.container}>
         <h1>Referer-Setter</h1>
 
         <input

@@ -1,9 +1,7 @@
-.app {
+.container {
   margin: 10px;
   white-space: nowrap;
 }
-
-.content {}
 
 .row {
   display: flex;
