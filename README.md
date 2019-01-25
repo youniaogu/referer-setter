@@ -1,3 +1,3 @@
 ## Referer Setter
 
-After install and build by yarn, load build folder use chrome extension.
+After install and build by yarn, use chrome extension to load build folder.
