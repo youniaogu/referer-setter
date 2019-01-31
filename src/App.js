@@ -19,19 +19,42 @@ class App extends Component {
   }
 
   get = key => {
-    window.chrome.storage.sync.get([key], result => {
-      if (!result || !result[key]) {
-        return;
-      }
+    if (window.chrome.storage) {
+      window.chrome.storage.sync.get([key], result => {
+        if (!result || !result[key]) {
+          return;
+        }
 
-      this.setState({ [key]: result[key] });
-    });
+        this.setState({ [key]: result[key] });
+      });
+    }
+
+    if (window.browser && window.browser.storage) {
+      window.browser.storage.local.get([key]).then(
+        result => {
+          if (!result || !result[key]) {
+            return;
+          }
+
+          this.setState({ [key]: result[key] });
+        },
+        err => {
+          console.log(err);
+        }
+      );
+    }
   };
 
   set = (key, value) => {
-    window.chrome.storage.sync.set({
-      [key]: value
-    });
+    if (window.chrome.storage) {
+      window.chrome.storage.sync.set({
+        [key]: value
+      });
+    }
+
+    if (window.browser && window.browser.storage) {
+      window.browser.storage.local.set({ [key]: value });
+    }
   };
 
   handleInputChange = evt => {
