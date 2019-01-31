@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   get = key => {
-    if (window.chrome.storage) {
+    if (window.chrome.storage && window.chrome.storage.sync) {
       window.chrome.storage.sync.get([key], result => {
         if (!result || !result[key]) {
           return;
@@ -46,7 +46,7 @@ class App extends Component {
   };
 
   set = (key, value) => {
-    if (window.chrome.storage) {
+    if (window.chrome.storage && window.chrome.storage.sync) {
       window.chrome.storage.sync.set({
         [key]: value
       });

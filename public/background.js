@@ -1,4 +1,4 @@
-if (window.chrome.storage.sync) {
+if (window.chrome.storage && window.chrome.storage.sync) {
   window.chrome.storage.sync.get(["list"], function(result) {
     if (!result || !result.list) {
       return;

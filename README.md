@@ -1,3 +1,3 @@
 ## Referer Setter
 
-After install and build by yarn, use chrome extension to load build folder.
+After install and build by yarn, rename manifest.*.json to manifest.json, use chrome(firefox) extension to load build folder.
