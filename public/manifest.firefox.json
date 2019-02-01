@@ -1,6 +1,6 @@
 {
   "name": "Referer_Setter",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "manifest_version": 2,
   "browser_action": {
     "default_icon": "icon24.png",
@@ -20,11 +20,5 @@
   "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'",
   "background": {
     "scripts": ["background.js"]
-  },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "addon@example.com",
-      "strict_min_version": "42.0"
-    }
   }
 }

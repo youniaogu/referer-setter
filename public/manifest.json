@@ -1,6 +1,6 @@
 {
   "name": "Referer_Setter",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "manifest_version": 2,
   "browser_action": {
     "default_icon": "icon24.png",
